@@ -1,4 +1,5 @@
-from src.circle_of_death import CircleOfDeath, circle
+from src.circle_of_death_2 import circ as circle
+from datetime import datetime
 
 def test_returns_1_if_passed_1():
     result = circle(1)
@@ -41,10 +42,19 @@ def test_returns_73_if_passed_100():
 
 
 def test_returns_68929_if_passed_100000():
+    start = datetime.now()
     result = circle(100000)
     assert result == 68929
+    end = datetime.now()
+    print(end - start)
+    
 
 
-# def test_returns_68929_if_passed_100000():
-#     result = circle(1000000)
-#     assert result == 68929
+def test_returns_68929_if_passed_100000():
+    result = circle(1000000)
+    assert result == 951425
+
+
+def test_returns_68929_if_passed_100000():
+    result = circle(1000000000000000000)
+    assert result == 847078495393153025
