@@ -5,6 +5,7 @@ class CircleIterator:
         self.even = len(self.people) % 2 == 0
         self.loop = 1
 
+
     def reset_odd_or_even(self):
         self.even = len(self.people) % 2 == 0
 

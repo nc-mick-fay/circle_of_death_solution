@@ -1,4 +1,6 @@
 from src.circle_iterator import CircleIterator
+from datetime import datetime
+start_time = datetime.now()
 
 def test_circle_class_contains_init_method():
     test_circle = CircleIterator(3)
@@ -73,3 +75,8 @@ def test_return_winner_returns_result():
     assert thousand_circle.return_winner() == 68929
     big_ol_circle = CircleIterator(1000000000)
     assert big_ol_circle.return_winner() == 926258177
+    hayooooooj_circle = CircleIterator(1000000000000000000)
+    assert hayooooooj_circle.return_winner() == 847078495393153025
+    end_time = datetime.now()
+    print(end_time - start_time)
+
