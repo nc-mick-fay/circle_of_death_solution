@@ -1,16 +1,15 @@
 class CircleIterator:
     def __init__(self, num):
-        self.people = range(1, num+1, 1)
+        self.people = range(1, num + 1, 1)
         self.wielder = True
         self.even = len(self.people) % 2 == 0
         self.loop = 1
-
 
     def reset_odd_or_even(self):
         self.even = len(self.people) % 2 == 0
 
     def execute(self):
-        self.loop = self.loop*2
+        self.loop = self.loop * 2
         if self.even and self.wielder:
             self.people = range(self.people[0], self.people[-1], self.loop)
 
